@@ -5,15 +5,9 @@
   </button>
 
 
-
-  <button class="btn btn-primary">
-    Click
-  </button>
-
-
-  <ul *ngFor="let e of empList" >
-    <li>
-        <a (click)="onSubmit()">{{ e.name }}</a>
+  <ul *ngFor="let e of empList" class="list-group">
+    <li class="list-group-item" (click)="onSubmit()">
+        {{ e.name }}
     </li>
   </ul>
 
