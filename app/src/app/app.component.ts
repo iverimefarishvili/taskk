@@ -15,7 +15,7 @@ export class AppComponent {
   clicked = false;
   index = -1;
   ind = -2;
-  leafs: leaf[];
+  leafs: Array<leaf> = [];
   empList: Array<Model> = [];
   
 

@@ -5,9 +5,9 @@
   </button>
 
 
-  <ul class="list-group" [b] = "ind">
+  <ul class="list-group" >
     <li *ngFor="let e of empList" class="list-group-item" (click)="e.index > b ? onSubmit() : onSubmit()">
-        {{  }}
+        {{ e.name }}
     </li>
   </ul>
 
