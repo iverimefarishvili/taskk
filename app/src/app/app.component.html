@@ -1,13 +1,13 @@
 <form>
   
-  <button class="btn btn-primary" (click)="onSubmit()" type="button">
+  <button class="btn btn-primary" type="button" [disabled]="clicked" (click)="onSubmit(); clicked = true;">
       Click
   </button>
 
 
-  <ul *ngFor="let e of empList" class="list-group">
-    <li class="list-group-item" (click)="onSubmit()">
-        {{ e.name }}
+  <ul class="list-group" [b] = "ind">
+    <li *ngFor="let e of empList" class="list-group-item" (click)="e.index > b ? onSubmit() : onSubmit()">
+        {{  }}
     </li>
   </ul>
 

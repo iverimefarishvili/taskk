@@ -12,7 +12,10 @@ import { Model } from './model';
 })
 
 export class AppComponent {
-  leafs: Array<leaf> = [];
+  clicked = false;
+  index = -1;
+  ind = -2;
+  leafs: leaf[];
   empList: Array<Model> = [];
   
 
@@ -32,8 +35,9 @@ export class AppComponent {
   
   onSubmit(model:Model) {
     //console.log(this.str);
+    console.log(model);
     //console.log(this.leafs.name);
-    this.empList.push({name: this.leafs.name});
+    this.empList.push({index: ++this.index ,name: this.leafs.name});
     console.log(this.empList);
     this.leafs = this.leafs.children[0];
     
