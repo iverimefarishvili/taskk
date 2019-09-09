@@ -1,24 +1,19 @@
 <form>
-  <div class="form-group">
-    <label for="email">E-Mail</label>
-    <input
-      type="email"
-      id="email"
-      class="form-control"
-      ngModel
-      name="email"
-      required
-      email
-    />
-  </div>
   
   <button class="btn btn-primary" (click)="onSubmit()" type="button">
       Click
   </button>
 
+
+
+  <button class="btn btn-primary">
+    Click
+  </button>
+
+
   <ul *ngFor="let e of empList" >
     <li>
-      {{ e.name }}
+        <a (click)="onSubmit()">{{ e.name }}</a>
     </li>
   </ul>
 

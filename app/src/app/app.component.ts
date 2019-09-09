@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService, leaf } from './app.service';
-import { Todo } from './todo';
+import { Model } from './model';
 
 
 
@@ -12,8 +12,8 @@ import { Todo } from './todo';
 })
 
 export class AppComponent {
-  leafs: leaf[];
-  empList: Array<Todo> = [];
+  leafs: Array<leaf> = [];
+  empList: Array<Model> = [];
   
 
   constructor(private appservice: AppService) {}
@@ -21,11 +21,16 @@ export class AppComponent {
   
 
   ngOnInit() {
-    this.leafs = this.appservice.getLeafs()[0];
+    this.appservice.getLeafs().map(
+      data => {
+        this.leafs = data;
+        console.log(data);
+      }
+    );
   }
   
   
-  onSubmit(todo:Todo) {
+  onSubmit(model:Model) {
     //console.log(this.str);
     //console.log(this.leafs.name);
     this.empList.push({name: this.leafs.name});

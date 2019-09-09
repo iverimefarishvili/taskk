@@ -17,8 +17,25 @@ export class AppService {
                     children: [
                         {
                             name: 'c',
-                            children: [
-                                
+                            children: [{
+                                name: 'd',
+                                children: [
+                                    {
+                                      name: 'e',
+                                      children: [
+                                        {
+                                          name: 'l',
+                                          children: [
+                                            {
+                                              name: null,
+                                              children: null
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                ]
+                              }
                             ]
                         }
                     ]
