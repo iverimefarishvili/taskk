@@ -1,0 +1,8 @@
+<div *ngFor="let e of child">
+    <ul>
+     <li>
+       {{e.name}}
+       <app-child [child]="e.children" *ngIf="e.children"></app-child>
+     </li>
+    </ul>
+  </div>

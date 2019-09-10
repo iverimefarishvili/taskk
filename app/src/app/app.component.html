@@ -1,14 +1,23 @@
 <form>
   
-  <button class="btn btn-primary" type="button" [disabled]="clicked" (click)="onSubmit(); clicked = true;">
+  <button class="btn btn-primary" type="button"  (click)="onSubmit(); clicked = true;">
       Click
   </button>
 
+  <!--<div *ngFor="let comment of comments">
+    <ul>
+     <li>
+       {{comment.text}}
+       <comments [comments]="comment.comments" *ngIf="comment.comments"></comments>
+     </li>
+    </ul>
+  </div>-->
+  <app-child [child]="leafs"></app-child>
 
-  <ul class="list-group" >
+  <!--<ul class="list-group" >
     <li *ngFor="let e of empList" class="list-group-item" (click)="e.index > ind ? onSubmit() : onClick()">
         {{ e.name }}
     </li>
-  </ul>
+  </ul>-->
 
 </form>

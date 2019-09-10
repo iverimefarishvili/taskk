@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 
 export interface leaf {
   name: string;
-  children: [leaf]
+  children: Array<leaf>
 }
 
 @Injectable()
@@ -16,32 +16,26 @@ export class AppService {
                 {
                     name: 'b',
                     children: [
-                        {
-                            name: 'c',
-                            children: [{
-                                name: 'd',
-                                children: [
-                                    {
-                                      name: 'e',
-                                      children: [
-                                        {
-                                          name: 'l',
-                                          children: [
-                                            {
-                                              name: null,
-                                              children: null
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                ]
-                              }
-                            ]
-                        }
+                      {
+                      name: 'k',
+                      children: [
+                      
+                      ]
+                    }
                     ]
-                }
-            ]
+                },
+                {
+                  name: 'z',
+                  children: [
+                      {
+                          name: 'c',
+                          children: [
+                      ]
+                      }
+                  ]
+              }
+            ],
+            
           }
         ];
     
