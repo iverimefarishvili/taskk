@@ -47,6 +47,7 @@ export class AppComponent {
       data => {
         this.empList.push({index: ++this.index ,name: data.name});
         console.log(this.empList);
+        
         this.leafs = data.children;
       }
     );
