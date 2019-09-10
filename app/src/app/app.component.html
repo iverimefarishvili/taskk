@@ -1,9 +1,10 @@
 <form>
   
   <button class="btn btn-primary" type="button"  (click)="onSubmit(); clicked = true;">
-      Click
+      click
   </button>
-
+  <app-child [child]="leafs"></app-child>
+  
   <!--<div *ngFor="let comment of comments">
     <ul>
      <li>
@@ -12,7 +13,7 @@
      </li>
     </ul>
   </div>-->
-  <app-child [child]="leafs"></app-child>
+  
 
   <!--<ul class="list-group" >
     <li *ngFor="let e of empList" class="list-group-item" (click)="e.index > ind ? onSubmit() : onClick()">
