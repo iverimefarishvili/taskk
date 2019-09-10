@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService, leaf } from './app.service';
+import { AppService, leaf} from './app.service';
 import { Model } from './model';
-
-
 
 
 @Component({
@@ -12,22 +10,28 @@ import { Model } from './model';
 })
 
 export class AppComponent {
+  
+
   clicked = false;
   index = -1;
   ind = -2;
-  leafs: Array<leaf> = [];
+  leafs: leaf[] = [ ];
   empList: Array<Model> = [];
   
-
   constructor(private appservice: AppService) {}
+  
 
   
 
   ngOnInit() {
-    this.appservice.getLeafs().map(
+    this.appservice.getLeafs()
+    .map(
       data => {
-        this.leafs = data;
         console.log(data);
+        //this.leafs = data;
+        
+        this.leafs.push({name: data.name, children: data.children} );
+        console.log(this.leafs);
       }
     );
   }
@@ -35,15 +39,20 @@ export class AppComponent {
   
   onSubmit(model:Model) {
     //console.log(this.str);
-    console.log(model);
+    //console.log(model);
     //console.log(this.leafs.name);
-    this.empList.push({index: ++this.index ,name: this.leafs.name});
-    console.log(this.empList);
-    this.leafs = this.leafs.children[0];
-    
-    //console.log(this.todos)
+    this.ind++
+    Object.values(this.leafs).map(
+      data => {
+        this.empList.push({index: ++this.index ,name: data.name});
+        console.log(this.empList);
+        this.leafs = data.children;
+      }
+    );
   }
 
-  
+  onClick() {
+    console.log("sry");
+  }
   
 }

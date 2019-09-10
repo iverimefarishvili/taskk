@@ -6,7 +6,7 @@
 
 
   <ul class="list-group" >
-    <li *ngFor="let e of empList" class="list-group-item" (click)="e.index > b ? onSubmit() : onSubmit()">
+    <li *ngFor="let e of empList" class="list-group-item" (click)="e.index > ind ? onSubmit() : onClick()">
         {{ e.name }}
     </li>
   </ul>
