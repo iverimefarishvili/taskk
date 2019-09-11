@@ -42,15 +42,15 @@ export class AppComponent {
     //console.log(this.str);
     //console.log(model);
     //console.log(this.leafs.name);
-    this.ind++
-    Object.values(this.leafs).map(
-      data => {
-        this.empList.push({index: ++this.index ,name: data.name});
-        console.log(this.empList);
-        
-        this.leafs = data.children;
-      }
-    );
+    //this.ind++
+    //Object.values(this.leafs).map(
+    //  data => {
+    //    this.empList.push({index: ++this.index ,name: data.name});
+    //    console.log(this.empList);
+    //    
+    //    this.leafs = data.children;
+    //  }
+    //);
   }
 
   onClick() {

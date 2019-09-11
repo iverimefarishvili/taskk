@@ -1,9 +1,9 @@
 <form>
   
-  <button class="btn btn-primary" type="button"  (click)="onSubmit(); clicked = true;">
+  <button class="btn btn-primary" type="button"  (click)="onSubmit(); clicked = !clicked ;">
       click
   </button>
-  <app-child [child]="leafs"></app-child>
+  <app-child *ngIf="clicked" [child]="leafs"></app-child>
   
   <!--<div *ngFor="let comment of comments">
     <ul>
