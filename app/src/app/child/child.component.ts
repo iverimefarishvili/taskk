@@ -17,6 +17,7 @@ export class ChildComponent implements OnInit {
 
   public clickChild(name: string): void {
     this.isActive = !this.isActive;
+    console.log(name);
   }
 
 }
