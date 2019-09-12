@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 
 export interface leaf {
   name: string;
-  children: Array<leaf>
+  children: Array<leaf>;
 }
 
 @Injectable()

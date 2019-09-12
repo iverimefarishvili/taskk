@@ -10,7 +10,7 @@ import { Model } from './model';
 })
 
 export class AppComponent {
-  
+
 
   clicked = false;
   index = -1;

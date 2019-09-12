@@ -8,15 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ChildComponent implements OnInit {
   @Input() child;
   isActive = true;
-
+  
   constructor() { }
 
   ngOnInit() {
     console.log(this.child);
   }
 
-  public clickChild(name: string): void {
-    this.isActive = !this.isActive;
+  public clickChild(name: any): void {
+    name.isActive = !name.isActive;
     console.log(name);
   }
 
