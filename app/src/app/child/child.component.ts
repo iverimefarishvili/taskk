@@ -21,9 +21,9 @@ export class ChildComponent implements OnInit {
   public clickChild(name: any): void {
     name.isActive = !name.isActive;
     if(name.isActive) {
-      this.divView.nativeElement.classList.add('openfolder');
+      name.this.divView.nativeElement.classList.add('openfolder');
     } else {
-      this.divView.nativeElement.classList.remove('openfolder');
+      name.this.divView.nativeElement.classList.remove('openfolder');
     }
     console.log(name);
   }
