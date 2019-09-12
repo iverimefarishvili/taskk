@@ -1,9 +1,12 @@
-<div *ngFor="let e of child">
+<div  *ngFor="let e of child">
 
 
 <ul >
-  <li>
-    <p (click)="clickChild(e)">{{e.name}}</p>
+  <li style="list-style: none;" class="folder" >
+    
+    <p (click)="clickChild(e)"></p>
+   
+    
     <div *ngIf="isActive">
         <app-child [child]="e.children" *ngIf="e.children && e.isActive"></app-child>
     </div>
