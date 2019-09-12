@@ -10,7 +10,7 @@ export class ChildComponent implements OnInit {
   isActive = true;
   
   @ViewChild("selector", {static: false}) divView: ElementRef;
-
+  
   constructor() { }
 
   ngOnInit() {
@@ -20,8 +20,9 @@ export class ChildComponent implements OnInit {
 
   public clickChild(name: any): void {
     name.isActive = !name.isActive;
+    console.log(this.divView);
     if(name.isActive) {
-      name.this.divView.nativeElement.classList.add('openfolder');
+      this.divView.nativeElement.name.classList.add('openfolder');
     } else {
       name.this.divView.nativeElement.classList.remove('openfolder');
     }

@@ -9,7 +9,7 @@ export interface leaf {
 @Injectable()
 export class AppService {
     getLeafs() {
-        const leaf: leaf[] = [
+        return [
           {
             name: 'a',
             children: [
@@ -57,7 +57,5 @@ export class AppService {
             
           }
         ];
-    
-        return leaf;
       }
 }

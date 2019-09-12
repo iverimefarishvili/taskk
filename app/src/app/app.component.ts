@@ -16,7 +16,7 @@ export class AppComponent {
   index = -1;
   ind = -2;
   leafs: leaf[] = [ ];
-  empList: Array<Model> = [];
+  empList: Model[] = [];
   
   constructor(private appservice: AppService) {}
   
@@ -24,16 +24,20 @@ export class AppComponent {
   
 
   ngOnInit() {
-    this.appservice.getLeafs()
-    .map(
-      data => {
-        console.log(data);
-        //this.leafs = data;
-        
-        this.leafs.push({name: data.name, children: data.children} );
-        console.log(this.leafs);
-      }
-    );
+
+    setTimeout(() => {
+      
+      this.appservice.getLeafs()
+      .map(
+        data => {
+          console.log(data);
+          //this.leafs = data;
+          
+          this.leafs.push({name: data.name, children: data.children} );
+          console.log(this.leafs);
+        }
+      );
+    }, 5000);
     
   }
   
